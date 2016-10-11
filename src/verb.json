@@ -1,0 +1,44 @@
+[
+  ["be動詞", "sum", "ある、いる", "不規則活用",
+    ["*esse*"],
+    ["*su*m", "*e*s", "*es*t", "*su*mus", "*es*tis", "*su*nt"],
+    ["er-[a]m", "er-[A]s", "er-[a]t", "er-[A]mus", "er-[A]tis", "er-[a]nt"],
+    ["er-{O}", "er-[i]s", "er-[i]t", "er-[i]mus", "er-[i]tis", "er-{u}nt"]
+  ],
+  ["第1活用", "amO", "愛する", "",
+    ["am[A]re"],
+    ["am{O}", "am[A]s", "am[a]t", "am[A]mus", "am[A]tis", "am[a]nt"],
+    ["am[A]-[ba]m", "am[A]-[bA]s", "am[A]-[ba]t", "am[A]-[bA]mus", "am[A]-[bA]tis", "am[A]-[ba]nt"],
+    ["am{A}-{bO}", "am[A]-[bi]s", "am[a]-[bi]t", "am[A]-[bi]mus", "am[A]-[bi]tis", "am[A]-{bu}nt"]
+  ],
+  ["第1活用の例外", "dO", "与える", "長音化しないものがある",
+    ["d{a}re"],
+    ["d[O]", "d[A]s", "d[a]t", "d{a}mus", "d{a}tis", "d[a]nt"],
+    ["d{a}-[ba]m", "d{a}-[bA]s", "d{a}-[ba]t", "d{a}-[bA]mus", "d{a}-[bA]tis", "d{a}-[ba]nt"],
+    ["d{a}-{bO}", "d{a}-[bi]s", "d{a}-[bi]t", "d{a}-[bi]mus", "d{a}-[bi]tis", "d{a}-{bu}nt"]
+  ],
+  ["第2活用", "dEleO", "こわす", "",
+    ["dEl[E]re"],
+    ["dEl[e]{O}", "dEl[E]s", "dEl[e]t", "dEl[E]mus", "dEl[E]tis", "dEl[e]nt"],
+    ["dEl[E]-[ba]m", "dEl[E]-[bA]s", "dEl[E]-[ba]t", "dEl[E]-[bA]mus", "dEl[E]-[bA]tis", "dEl[E]-[ba]nt"],
+    ["dEl[E]-{bO}", "dEl[E]-[bi]s", "dEl[E]-[bi]t", "dEl[E]-[bi]mus", "dEl[E]-[bi]tis", "dEl[E]-[bu]nt"]
+  ],
+  ["第3活用A", "legO", "読む", "",
+    ["leg[E]re"],
+    ["leg{O}", "leg[i]s", "leg[i]t", "leg[i]mus", "leg[i]tis", "leg[u]nt"],
+    ["leg[E]-[ba]m", "leg[E]-[bA]s", "leg[E]-[ba]t" ,"leg[E]-[bA]mus", "leg[E]-[bA]tis", "leg[E]-[ba]nt"],
+    ["leg-{a}m", "leg-[E]s", "leg-[e]t", "leg-[E]mus", "leg-[E]tis", "leg-[e]nt"]
+  ],
+  ["第3活用B", "capiO", "捕える", "io",
+    ["cap[E]re"],
+    ["cap{i}{O}", "cap[i]s", "cap[i]t", "cap[i]mus", "cap[i]tis", "cap{i}[u]nt"],
+    ["cap[i][E]-[ba]m", "cap[i][E]-[bA]s", "cap[i][E]-[ba]t", "cap[i][E]-[bA]mus", "cap[i][E]-[ba]m", "cap[i][E]-[ba]m"],
+    ["cap[i]-{a}m", "cap[i]-[E]s", "cap[i]-[e]t", "cap[i]-[E]mus", "cap[i]-[E]tis", "cap[i]-[e]nt"]
+  ],
+  ["第4活用", "audiO", "聞く", "これはiが伸びる",
+    ["aud[I]re"],
+    ["aud[i]{O}", "aud{I}s", "aud[i]t", "aud{I}mus", "aud{I}tis", "aud{i}[u]nt"],
+    ["aud[i][E]-[ba]m", "aud[i][E]-[bA]s", "aud[i][E]-[ba]t", "aud[i][E]-[bA]mus", "aud[i][E]-[bA]tis", "aud[i][E]-[bA]nt"],
+    ["aud[i]-{a}m", "aud[i]-[E]s", "aud[i]-[e]t", "aud[i]-[E]mus", "cap[i]-[E]tis", "cap[i]-[e]nt"]
+  ]
+]

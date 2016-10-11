@@ -1,0 +1,107 @@
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+th {
+  border-top: 1px solid #000;
+  background-color: #eee;
+}
+tr.conj {
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #aaa;
+}
+tr.note {
+  border-bottom: 1px solid #000;
+  background-color: #eee;
+}
+td {
+  padding-left: 5px;
+  padding-right: 5px;
+}
+td,
+th {
+  border-left: 1px dotted #bbb;
+  border-right: 1px dotted #bbb;
+}
+.header {
+  background-color: #f8f8f8;
+}
+.latin {
+  font-family: "TexGyreSchola";
+  font-size: 14px;
+  line-height: 18px;
+}
+.latin em {
+  font-size: 20px;
+  text-shadow: 1px 1px 0px #888;
+}
+.latin .vowel {
+  font-size: 20px;
+}
+.latin .vowel_a {
+  color: #ff1209;
+  text-shadow: 1px 1px 0px #ff8984;
+}
+.latin .vowel_la {
+  color: #ff1209;
+  text-shadow: 1px 1px 0px #b90700;
+}
+.latin .vowel_i {
+  color: #e7ba33;
+  text-shadow: 1px 1px 0px #f3dd99;
+}
+.latin .vowel_li {
+  color: #e7ba33;
+  text-shadow: 1px 1px 0px #b18a15;
+}
+.latin .vowel_u {
+  color: #4a9e55;
+  text-shadow: 1px 1px 0px #a0d3a7;
+}
+.latin .vowel_lu {
+  color: #4a9e55;
+  text-shadow: 1px 1px 0px #346f3b;
+}
+.latin .vowel_e {
+  color: #0794ce;
+  text-shadow: 1px 1px 0px #6fd2fa;
+}
+.latin .vowel_le {
+  color: #0794ce;
+  text-shadow: 1px 1px 0px #056890;
+}
+.latin .vowel_o {
+  color: #9c29d5;
+  text-shadow: 1px 1px 0px #ce94ea;
+}
+.latin .vowel_lo {
+  color: #9c29d5;
+  text-shadow: 1px 1px 0px #6d1d95;
+}
+.def .latin {
+  font-size: 16px;
+}
+@font-face {
+  font-family: "TeXGyreSchola";
+  font-style: normal;
+  font-weight: normal;
+  src: local('TeXGyreSchola-Regular'), url("font/texgyreschola-regular.woff") format('woff');
+}
+@font-face {
+  font-family: "TeXGyreSchola";
+  font-style: normal;
+  font-weight: bold;
+  src: local('TeXGyreSchola-Bold'), url("font/texgyreschola-bold.woff") format('woff');
+}
+@font-face {
+  font-family: "TeXGyreSchola";
+  font-style: italic;
+  font-weight: normal;
+  src: local('TeXGyreSchola-Italic'), url("font/texgyreschola-italic.woff") format('woff');
+}
+@font-face {
+  font-family: "TeXGyreSchola";
+  font-style: italic;
+  font-weight: bold;
+  src: local('TeXGyreSchola-BoldItalic'), url("font/texgyreschola-bolditalic.woff") format('woff');
+}

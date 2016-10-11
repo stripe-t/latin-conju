@@ -1,0 +1,19 @@
+[
+  ["第1変化名詞", "rosa", "[f]ばら",
+    [
+      "ros[a]", "ros[a]", "ros[am]", "ros[ae]", "ros[ae]", "ros[A]",
+      "ros[ae]", "ros[ae]", "ros[As]", "ros[Arum]", "ros[Is]", "ros[Is]"
+    ]
+  ],
+  ["第2変化名詞", "bellum", "[n]戦争",
+    [
+      "bell[um]", "bell[um]", "bell[um]", "bell[I]", "bell[O]", "bell[O]",
+      "bell[a]", "bell[a]", "bell[a]", "bell[Orum]", "bell[Is]", "bell[Is]"
+    ]
+  ],
+  ["第3変化名詞", "dominus", "[m]主人",
+    [
+      ""
+    ]
+  ]
+]

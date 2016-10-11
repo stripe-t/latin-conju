@@ -1,0 +1,80 @@
+color_a = rgb(255, 18, 9)
+color_i = rgb(231, 186, 51)
+color_u = rgb(74, 158, 85)
+color_e = rgb(7, 148, 206)
+color_o = rgb(156, 41, 213)
+
+table
+  width 100%
+  border-collapse collapse
+
+th
+  border-top 1px solid #000
+  background-color #EEE
+
+tr.conj
+  border-top 1px solid #000
+  border-bottom 1px solid #AAA
+
+tr.note
+  border-bottom 1px solid #000
+  background-color #EEE
+
+td
+  padding-left 5px
+  padding-right 5px
+
+td, th
+  border-left 1px dotted #BBB
+  border-right 1px dotted #BBB
+
+.header
+  background-color #F8F8F8
+
+.latin
+  font-family "TexGyreSchola"
+  font-size 14px
+  line-height 18px
+
+.latin em
+  font-size 20px
+  text-shadow 1px 1px 0px #888888
+
+.latin .vowel
+  font-size 20px
+
+for v in a i u e o
+  .latin .vowel_{v}
+    color color_ + v
+    text-shadow 1px 1px 0px lighten(color_ + v, 50%)
+  .latin .vowel_l{v}
+    //color darken(color_ + v, 20%)
+    color color_ + v
+    text-shadow 1px 1px 0px darken(color_ + v, 30%)
+
+.def .latin
+  font-size 16px
+
+@font-face
+  font-family "TeXGyreSchola"
+  font-style normal
+  font-weight normal
+  src local('TeXGyreSchola-Regular'), url('font/texgyreschola-regular.woff') format('woff')
+
+@font-face
+  font-family "TeXGyreSchola"
+  font-style normal
+  font-weight bold
+  src local('TeXGyreSchola-Bold'), url('font/texgyreschola-bold.woff') format('woff')
+
+@font-face
+  font-family "TeXGyreSchola"
+  font-style italic
+  font-weight normal
+  src local('TeXGyreSchola-Italic'), url('font/texgyreschola-italic.woff') format('woff')
+
+@font-face
+  font-family "TeXGyreSchola"
+  font-style italic
+  font-weight bold
+  src local('TeXGyreSchola-BoldItalic'), url('font/texgyreschola-bolditalic.woff') format('woff')
