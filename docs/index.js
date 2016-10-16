@@ -1760,9 +1760,10 @@
 
 	module.exports = [
 		[
+			0,
 			"hostis, is",
 			"[m, f] 敵",
-			"",
+			"-ium型基本形 -is, -is型",
 			[
 				[
 					"a",
@@ -1783,9 +1784,10 @@
 			]
 		],
 		[
+			1,
 			"vulpEs",
 			"[f] きつね ",
-			"",
+			"-ium型基本形 -es, -is型",
 			[],
 			[
 				"vulp-Es",
@@ -1801,9 +1803,10 @@
 			]
 		],
 		[
+			1,
 			"mOns",
 			"[m] 山",
-			"",
+			"-ium型基本形 -s, -is型",
 			[],
 			[
 				"mOn-s",
@@ -1819,9 +1822,10 @@
 			]
 		],
 		[
+			1,
 			"ars",
 			"[f] 技術、芸術",
-			"",
+			"-ium型基本形 語幹変化をする-, -is型",
 			[],
 			[
 				"ars",
@@ -1837,9 +1841,10 @@
 			]
 		],
 		[
+			0,
 			"mare",
 			"[n] 海",
-			"",
+			"-ium型例外 -e, -is型\n単対が単主と同じ",
 			[],
 			[
 				"mar-e",
@@ -1855,9 +1860,10 @@
 			]
 		],
 		[
+			1,
 			"animal",
 			"[n] 動物",
-			"",
+			"-ium型例外 語幹変化をしない-, -is型",
 			[],
 			[
 				"animal",
@@ -1873,9 +1879,10 @@
 			]
 		],
 		[
+			0,
 			"mercAtor",
 			"[m] 商人",
-			"",
+			"-um型基本形 語幹変化をしない-, -is型",
 			[],
 			[
 				"mercAtor",
@@ -1891,9 +1898,10 @@
 			]
 		],
 		[
+			1,
 			"homO",
 			"[m] 人間",
-			"",
+			"-um型基本形 語幹変化をするn語幹の-, -is型",
 			[],
 			[
 				"homO",
@@ -1909,27 +1917,10 @@
 			]
 		],
 		[
-			"nOmen",
-			"[n] 名",
-			"",
-			[],
-			[
-				"nOmen",
-				"*nOmen*",
-				"nOmin-is",
-				"(nOmin-I)",
-				"(nOmin-e)",
-				"*nOmin-a*",
-				"(nOmin-a)",
-				"nOmin-um",
-				"(nOmin-ibus)",
-				"(nOmin-ibus)"
-			]
-		],
-		[
+			1,
 			"canis",
 			"[m, f] 犬",
-			"",
+			"-um型基本形 -is, -is型(-iumの-is, -isの例外)",
 			[
 				[
 					"juvenis, is",
@@ -1954,9 +1945,10 @@
 			]
 		],
 		[
+			1,
 			"Juppiter",
 			"[m] ユピテル",
-			"",
+			"-um型基本形 語幹変化が例外的",
 			[],
 			[
 				"Juppiter",
@@ -1969,6 +1961,25 @@
 				"Jov-um",
 				"(Jov-ibus)",
 				"(Jov-ibus)"
+			]
+		],
+		[
+			0,
+			"nOmen",
+			"[n] 名",
+			"-um型例外 語幹変化をする-, -is型\n単対が単主と同じ、複主が-a\n中性名詞はこれらしい",
+			[],
+			[
+				"nOmen",
+				"*nOmen*",
+				"nOmin-is",
+				"(nOmin-I)",
+				"(nOmin-e)",
+				"*nOmin-a*",
+				"(nOmin-a)",
+				"nOmin-um",
+				"(nOmin-ibus)",
+				"(nOmin-ibus)"
 			]
 		]
 	];
@@ -2373,33 +2384,92 @@
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	var types = ["単主", "単対", "単属", "単与", "単奪", "複主", "複対", "複属", "複与", "複奪"];
-	var template = ["さまざま", "-em<br />(主格, -im)", "-is", "-ī", "-e<br />(-ī)", "-ēs<br />(-a, -ia)", "主格", "-(i)um", "-ibus", "-ibus"];
+	var template = ["様々", "-em<br />(主格, -im)", "-is<br />語幹様々", "-ī", "-e<br />(-ī)", "-ēs<br />(-a, -ia)", "主格", "-(i)um", "-ibus", "-ibus"];
+	var expandState = [];
 
 	function renderNoun3() {
+	  var data = [];
+	  var parent = [data];
+	  _noun2.default.forEach(function (e, i) {
+	    parent = parent.slice(0, e[0] + 1);
+	    var d = {
+	      index: i,
+	      data: e.slice(1),
+	      children: []
+	    };
+	    parent[e[0]].push(d);
+	    parent.push(d.children);
+	    expandState[i] = false;
+	  });
+
 	  (0, _jquery2.default)("#noun3>tbody").append("<tr></tr>");
 	  var h = (0, _jquery2.default)("#noun3>tbody>tr");
 
 	  h.append("<th></th>");
+	  h.append("<th></th>");
 	  types.forEach(function (e, i) {
 	    if (isImportantColumn(i)) h.append("<th class=\"important\">" + e + "</th>");else h.append("<th>" + e + "</th>");
 	  });
+
 	  (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"conj\" id=\"noun3_header\"></tr>");
 	  var ht = (0, _jquery2.default)("#noun3_header");
+	  ht.append("<td></td>");
 	  ht.append("<td></td>");
 	  template.forEach(function (e, i) {
 	    if (isImportantColumn(i)) ht.append("<td class=\"important\">" + e + "</td>");else ht.append("<td>" + e + "</td>");
 	  });
-	  _noun2.default.forEach(function (e, i) {
-	    (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"conj\" id=\"noun3_" + i + "\"></tr>");
-	    var r = (0, _jquery2.default)("#noun3_" + i);
-	    r.append("<td class=\"header\"></td>");
-	    var d = (0, _jquery2.default)("#noun3_" + i + ">td:last");
-	    d.append("<div class=\"def\">" + (0, _formatter.format)(e[0], "normal") + "</div>");
-	    d.append("<div class=\"meaning\">" + e[1] + "</div>");
-	    e[4].forEach(function (f, fi) {
-	      if (isImportantColumn(fi)) r.append("<td class=\"important\">" + (0, _formatter.format)(f, "noun3") + "</td>");else r.append("<td>" + (0, _formatter.format)(f, "noun3") + "</td>");
-	    });
-	    (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"note\" id=\"verb" + i + "_note\"><td colspan=\"11\">" + e[2] + "</td></tr>");
+
+	  data.forEach(function (e) {
+	    renderRow(e, 0);
+	  });
+	}
+
+	function renderRow(e, level) {
+	  var index = e.index;
+	  var ed = e.data;
+	  var children = e.children;
+	  (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"conj conj_l" + level + "\" id=\"noun3_" + index + "\"></tr>");
+	  var r = (0, _jquery2.default)("#noun3_" + index);
+	  r.append("<td class=\"expander\"></td>");
+	  var exp = (0, _jquery2.default)("#noun3_" + index + ">td:last");
+	  if (children.length != 0) {
+	    (function () {
+	      exp.append("<div class=\"expander_btn\">+</div>");
+	      var btn = (0, _jquery2.default)("#noun3_" + index + ">td:last>.expander_btn");
+	      btn.on("click", function () {
+	        if (expandState[index]) {
+	          children.forEach(function (ce) {
+	            var ci = ce.index;
+	            (0, _jquery2.default)("#noun3_" + ci).hide();
+	            (0, _jquery2.default)("#noun3_" + ci + "_note").hide();
+	            btn.text("+");
+	          });
+	        } else {
+	          children.forEach(function (ce) {
+	            var ci = ce.index;
+	            (0, _jquery2.default)("#noun3_" + ci).show();
+	            (0, _jquery2.default)("#noun3_" + ci + "_note").show();
+	            btn.text("-");
+	          });
+	        }
+	        expandState[index] = !expandState[index];
+	      });
+	    })();
+	  }
+	  r.append("<td class=\"header\"></td>");
+	  var d = (0, _jquery2.default)("#noun3_" + index + ">td:last");
+	  d.append("<div class=\"def\">" + (0, _formatter.format)(ed[0], "normal") + "</div>");
+	  d.append("<div class=\"meaning\">" + ed[1] + "</div>");
+	  ed[4].forEach(function (f, fi) {
+	    if (isImportantColumn(fi)) r.append("<td class=\"important\">" + (0, _formatter.format)(f, "noun3") + "</td>");else r.append("<td>" + (0, _formatter.format)(f, "noun3") + "</td>");
+	  });
+	  (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"note note_l" + level + "\" id=\"noun3_" + index + "_note\"><td></td><td class=\"note_body\" colspan=\"11\">" + ed[2].replace(/\n/g, "<br />") + "</td></tr>");
+	  if (level != 0) {
+	    r.hide();
+	    (0, _jquery2.default)("#noun3_" + index + "_note").hide();
+	  }
+	  children.forEach(function (e) {
+	    return renderRow(e, level + 1);
 	  });
 	}
 

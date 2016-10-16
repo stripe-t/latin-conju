@@ -4,7 +4,6 @@ body {
 table {
   width: 100%;
   border-collapse: collapse;
-  table-layout: fixed;
 }
 th {
   border-top: 1px solid #000;
@@ -31,6 +30,11 @@ th {
   background-color: #f8f8f8;
   border-bottom: 1px solid #000;
 }
+#noun3 td:nth-child(3),
+#noun3 th:nth-child(3) {
+  border-left: 3px double #888;
+  border-right: 3px double #888;
+}
 .header {
   background-color: #f8f8f8;
 }
@@ -43,9 +47,12 @@ th.important {
   font-size: 14px;
   line-height: 18px;
 }
-.latin em {
+#verb .latin em {
   font-size: 20px;
   text-shadow: 1px 1px 0px #888;
+}
+#noun3 .latin em {
+  font-size: 20px;
 }
 .latin .vowel {
   font-size: 20px;
@@ -96,6 +103,18 @@ th.important {
 }
 .def .latin {
   font-size: 16px;
+}
+.expander_btn {
+  width: 20px;
+  text-align: center;
+  cursor: pointer;
+  border: 1px solid #888;
+  background-color: #ddd;
+  padding: 2px;
+}
+.conj_l1>td:first-child,
+.note_l1>td:first-child {
+  background-color: #ccc;
 }
 @font-face {
   font-family: "TeXGyreSchola";

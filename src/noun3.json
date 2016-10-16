@@ -1,61 +1,55 @@
 [
   [
-    "hostis, is", "[m, f] 敵", "",
+    0, "hostis, is", "[m, f] 敵", "-ium型基本形 -is, -is型",
     [
       ["a", "b"]
     ],
     ["host-is", "(host-em)", "host-is", "(host-I)", "(host-e)", "(host-Es)", "(host-Es)", "host-ium", "(host-ibus)", "(host-ibus)"]
   ],
   [
-    "vulpEs", "[f] きつね ", "",
+    1, "vulpEs", "[f] きつね ", "-ium型基本形 -es, -is型",
     [
     ],
     ["vulp-Es", "(vulp-em)", "vulp-is", "(vulp-I)", "(vulp-e)", "(vulp-Es)", "(vulp-Es)", "vulp-ium", "(vulp-ibus)", "(vulp-ibus)"]
   ],
   [
-    "mOns", "[m] 山", "",
+    1, "mOns", "[m] 山", "-ium型基本形 -s, -is型",
     [
     ],
     ["mOn-s", "(mont-em)", "mont-is", "(mont-I)", "(mont-e)", "(mont-Es)", "(mont-Es)", "mont-ium", "(mont-ibus)", "(mont-ibus)"]
   ],
   [
-    "ars", "[f] 技術、芸術", "",
+    1, "ars", "[f] 技術、芸術", "-ium型基本形 語幹変化をする-, -is型",
     [
     ],
     ["ars", "(art-em)", "art-is", "(art-I)", "(art-e)", "(art-Es)", "(art-Es)", "art-ium", "(art-ibus)", "(art-ibus)"]
   ],
   [
-    "mare", "[n] 海", "",
+    0, "mare", "[n] 海", "-ium型例外 -e, -is型\n単対が単主と同じ",
     [
     ],
     ["mar-e", "*mar-e*", "mar-is", "(mar-I)", "*mar-I*", "*mar-ia*", "(mar-ia)", "mar-ium", "(mar-ibus)", "(mar-ibus)"]
   ],
   [
-    "animal", "[n] 動物", "",
+    1, "animal", "[n] 動物", "-ium型例外 語幹変化をしない-, -is型",
     [
     ],
     ["animal", "*animal*", "animAl-is", "(animAl-I)", "*animAl-I*", "*animAl-ia*", "(animAl-ia)", "animAl-ium", "(animAl-ibus)", "(animAl-ibus)"]
   ],
   [
-    "mercAtor", "[m] 商人", "",
+    0, "mercAtor", "[m] 商人", "-um型基本形 語幹変化をしない-, -is型",
     [
     ],
     ["mercAtor", "(mercAtor-em)", "mercAtOr-is", "(mercAtOr-I)", "(mercAtOr-e)", "(mercAtOr-Es)", "(mercAtOr-Es)", "mercAtOr-um", "(mercAtOr-ibus)", "(mercAtOr-ibus)"]
   ],
   [
-    "homO", "[m] 人間", "",
+    1, "homO", "[m] 人間", "-um型基本形 語幹変化をするn語幹の-, -is型",
     [
     ],
     ["homO", "(homin-em)", "homin-is", "(homin-I)", "(homin-e)", "(homin-Es)", "(homin-Es)", "homin-um", "(homin-ibus)", "(homin-ibus)"]
   ],
   [
-    "nOmen", "[n] 名", "",
-    [
-    ],
-    ["nOmen", "*nOmen*", "nOmin-is", "(nOmin-I)", "(nOmin-e)", "*nOmin-a*", "(nOmin-a)", "nOmin-um", "(nOmin-ibus)", "(nOmin-ibus)"]
-  ],
-  [
-    "canis", "[m, f] 犬", "",
+    1, "canis", "[m, f] 犬", "-um型基本形 -is, -is型(-iumの-is, -isの例外)",
     [
       ["juvenis, is", "[m, f] 青年"],
       ["senex, sen-is", "[m, f] 老人"]
@@ -63,9 +57,15 @@
     ["can-is", "(can-em)", "can-is", "(can-I)", "(can-e)", "(can-Es)", "(can-Es)", "can-um", "(can-ibus)", "(can-ibus)"]
   ],
   [
-    "Juppiter", "[m] ユピテル", "",
+    1, "Juppiter", "[m] ユピテル", "-um型基本形 語幹変化が例外的",
     [
     ],
     ["Juppiter", "(Jov-em)", "Jov-is", "(Jov-I)", "(Jov-e)", "(Jov-Es)", "(Jov-Es)", "Jov-um", "(Jov-ibus)", "(Jov-ibus)"]
+  ],
+  [
+    0, "nOmen", "[n] 名", "-um型例外 語幹変化をする-, -is型\n単対が単主と同じ、複主が-a\n中性名詞はこれらしい",
+    [
+    ],
+    ["nOmen", "*nOmen*", "nOmin-is", "(nOmin-I)", "(nOmin-e)", "*nOmin-a*", "(nOmin-a)", "nOmin-um", "(nOmin-ibus)", "(nOmin-ibus)"]
   ]
 ]
