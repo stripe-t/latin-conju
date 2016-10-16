@@ -1,0 +1,71 @@
+[
+  [
+    "hostis, is", "[m, f] 敵", "",
+    [
+      ["a", "b"]
+    ],
+    ["host-is", "(host-em)", "host-is", "(host-I)", "(host-e)", "(host-Es)", "(host-Es)", "host-ium", "(host-ibus)", "(host-ibus)"]
+  ],
+  [
+    "vulpEs", "[f] きつね ", "",
+    [
+    ],
+    ["vulp-Es", "(vulp-em)", "vulp-is", "(vulp-I)", "(vulp-e)", "(vulp-Es)", "(vulp-Es)", "vulp-ium", "(vulp-ibus)", "(vulp-ibus)"]
+  ],
+  [
+    "mOns", "[m] 山", "",
+    [
+    ],
+    ["mOn-s", "(mont-em)", "mont-is", "(mont-I)", "(mont-e)", "(mont-Es)", "(mont-Es)", "mont-ium", "(mont-ibus)", "(mont-ibus)"]
+  ],
+  [
+    "ars", "[f] 技術、芸術", "",
+    [
+    ],
+    ["ars", "(art-em)", "art-is", "(art-I)", "(art-e)", "(art-Es)", "(art-Es)", "art-ium", "(art-ibus)", "(art-ibus)"]
+  ],
+  [
+    "mare", "[n] 海", "",
+    [
+    ],
+    ["mar-e", "*mar-e*", "mar-is", "(mar-I)", "*mar-I*", "*mar-ia*", "(mar-ia)", "mar-ium", "(mar-ibus)", "(mar-ibus)"]
+  ],
+  [
+    "animal", "[n] 動物", "",
+    [
+    ],
+    ["animal", "*animal*", "animAl-is", "(animAl-I)", "*animAl-I*", "*animAl-ia*", "(animAl-ia)", "animAl-ium", "(animAl-ibus)", "(animAl-ibus)"]
+  ],
+  [
+    "mercAtor", "[m] 商人", "",
+    [
+    ],
+    ["mercAtor", "(mercAtor-em)", "mercAtOr-is", "(mercAtOr-I)", "(mercAtOr-e)", "(mercAtOr-Es)", "(mercAtOr-Es)", "mercAtOr-um", "(mercAtOr-ibus)", "(mercAtOr-ibus)"]
+  ],
+  [
+    "homO", "[m] 人間", "",
+    [
+    ],
+    ["homO", "(homin-em)", "homin-is", "(homin-I)", "(homin-e)", "(homin-Es)", "(homin-Es)", "homin-um", "(homin-ibus)", "(homin-ibus)"]
+  ],
+  [
+    "nOmen", "[n] 名", "",
+    [
+    ],
+    ["nOmen", "*nOmen*", "nOmin-is", "(nOmin-I)", "(nOmin-e)", "*nOmin-a*", "(nOmin-a)", "nOmin-um", "(nOmin-ibus)", "(nOmin-ibus)"]
+  ],
+  [
+    "canis", "[m, f] 犬", "",
+    [
+      ["juvenis, is", "[m, f] 青年"],
+      ["senex, sen-is", "[m, f] 老人"]
+    ],
+    ["can-is", "(can-em)", "can-is", "(can-I)", "(can-e)", "(can-Es)", "(can-Es)", "can-um", "(can-ibus)", "(can-ibus)"]
+  ],
+  [
+    "Juppiter", "[m] ユピテル", "",
+    [
+    ],
+    ["Juppiter", "(Jov-em)", "Jov-is", "(Jov-I)", "(Jov-e)", "(Jov-Es)", "(Jov-Es)", "Jov-um", "(Jov-ibus)", "(Jov-ibus)"]
+  ]
+]

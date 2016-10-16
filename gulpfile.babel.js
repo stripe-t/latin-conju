@@ -4,7 +4,9 @@ import pug from "gulp-pug"
 import stylus from "gulp-stylus"
 import livereload from "gulp-livereload"
 
-g.task("html", () => g.src("src/index.pug").pipe(pug()).pipe(g.dest("docs/")).pipe(livereload()))
+function log(e) { console.log(e) }
+
+g.task("html", () => g.src("src/index.pug").pipe(pug().on('error', log)).pipe(g.dest("docs/")).pipe(livereload()))
 g.task("js",   () => g.src("src/index.js").pipe(webpack({
   module: {
     loaders: [
@@ -15,8 +17,8 @@ g.task("js",   () => g.src("src/index.js").pipe(webpack({
   output: {
     filename: "index.js"
   }
-})).pipe(g.dest("docs/")).pipe(livereload()))
-g.task("css",  () => g.src("src/index.stylus").pipe(stylus()).pipe(g.dest("docs/")).pipe(livereload()))
+}).on('error', log)).pipe(g.dest("docs/")).pipe(livereload()))
+g.task("css",  () => g.src("src/index.stylus").pipe(stylus().on('error', log)).pipe(g.dest("docs/")).pipe(livereload()))
 g.task("font", () => g.src("src/font/**/*").pipe(g.dest("docs/font")))
 
 g.task("all", ["html", "js", "css", "font"])

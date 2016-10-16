@@ -1,6 +1,10 @@
+body {
+  min-width: 1000px;
+}
 table {
   width: 100%;
   border-collapse: collapse;
+  table-layout: fixed;
 }
 th {
   border-top: 1px solid #000;
@@ -23,8 +27,16 @@ th {
   border-left: 1px dotted #bbb;
   border-right: 1px dotted #bbb;
 }
+#noun3_header {
+  background-color: #f8f8f8;
+  border-bottom: 1px solid #000;
+}
 .header {
   background-color: #f8f8f8;
+}
+td.important,
+th.important {
+  background-color: #e0e0e0;
 }
 .latin {
   font-family: "TexGyreSchola";
@@ -77,6 +89,10 @@ th {
 .latin .vowel_lo {
   color: #9c29d5;
   text-shadow: 1px 1px 0px #6d1d95;
+}
+.latin .default {
+  color: #bbb;
+  font-size: 12px;
 }
 .def .latin {
   font-size: 16px;

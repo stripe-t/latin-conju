@@ -50,101 +50,41 @@
 
 	var _jquery2 = _interopRequireDefault(_jquery);
 
-	var _verb = __webpack_require__(3);
+	var _noun = __webpack_require__(3);
+
+	var _noun2 = _interopRequireDefault(_noun);
+
+	var _verb = __webpack_require__(4);
 
 	var _verb2 = _interopRequireDefault(_verb);
 
+	var _noun3 = __webpack_require__(7);
+
+	var _noun4 = _interopRequireDefault(_noun3);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-	var types = ["不定詞(現在)", "現在", "未完了", "未来"];
+	var tabs = [["verb", "動詞"], ["noun3", "第3変化名詞"]];
+	var currentTab = "noun3";
 
 	(0, _jquery2.default)(function () {
-	  (0, _jquery2.default)("#verb>tbody").append("<tr></tr>");
-	  var h = (0, _jquery2.default)("#verb>tbody>tr");
-	  h.append("<th></th>");
-	  types.forEach(function (e) {
-	    h.append("<th>" + e + "</th>");
-	  });
-	  _verb2.default.forEach(function (e, i) {
-	    (0, _jquery2.default)("#verb>tbody").append("<tr class=\"conj\" id=\"verb" + i + "\"></tr>");
-	    var r = (0, _jquery2.default)("#verb" + i);
-	    r.append("<td class=\"header\"></td>");
-	    var d = (0, _jquery2.default)("#verb" + i + ">td:last");
-	    d.append("<div class=\"type\">" + e[0] + "</div>");
-	    d.append("<div class=\"def\">" + format(e[1]) + "</div>");
-	    d.append("<div class=\"meaning\">" + e[2] + "</div>");
-	    e.slice(4).forEach(function (f) {
-	      r.append("<td></td>");
-	      var c = (0, _jquery2.default)("#verb" + i + ">td:last");
-	      f.forEach(function (g) {
-	        c.append("" + format(g));
-	      });
+	  tabs.forEach(function (e) {
+	    (0, _jquery2.default)("#tabs").append("<a href=\"#\">" + e[1] + "</a>");
+	    (0, _jquery2.default)("#tabs>a:last").on("click", function () {
+	      (0, _jquery2.default)("#" + currentTab).hide();
+	      (0, _jquery2.default)("#" + e[0]).show();
+	      currentTab = e[0];
 	    });
-	    (0, _jquery2.default)("#verb>tbody").append("<tr class=\"note\" id=\"verb" + i + "_note\"><td colspan=\"5\">" + e[3] + "</td></tr>");
 	  });
+
+	  (0, _verb2.default)();
+	  (0, _noun4.default)();
+
+	  tabs.forEach(function (e) {
+	    return (0, _jquery2.default)("#" + e[0]).hide();
+	  });
+	  (0, _jquery2.default)("#" + currentTab).show();
 	});
-
-	function replaceVowel(str) {
-	  return str.replace("A", "ā").replace("I", "ī").replace("U", "ū").replace("E", "ē").replace("O", "ō");
-	}
-
-	function format(str) {
-	  return "<div class=\"latin\">" + format_recursive(str) + "</div>";
-	}
-
-	function format_recursive(str) {
-	  var buffer = "";
-	  var startIndex = 0;
-	  var listIndex = -1;
-
-	  var _loop = function _loop(i) {
-	    var c = str.charAt(i);
-	    if (listIndex == -1) {
-	      var li = format_list.findIndex(function (e) {
-	        return c == e[0];
-	      });
-	      if (li >= 0) {
-	        buffer += replaceVowel(str.slice(startIndex, i));
-	        listIndex = li;
-	        startIndex = i + 1;
-	      }
-	    } else {
-	      if (c == format_list[listIndex][1]) {
-	        buffer += format_list[listIndex][2](str.slice(startIndex, i));
-	        listIndex = -1;
-	        startIndex = i + 1;
-	      }
-	    }
-	  };
-
-	  for (var i = 0; i < str.length; i++) {
-	    _loop(i);
-	  }
-	  if (listIndex >= 0) buffer += str.slice(startIndex);else buffer += replaceVowel(str.slice(startIndex));
-	  return buffer;
-	}
-
-	function format_italic(str) {
-	  return "<em>" + format_recursive(str) + "</em>";
-	}
-
-	function format_vowel(str) {
-	  var vowelType = vowel_list.find(function (e) {
-	    return str.indexOf(e[0]) >= 0;
-	  })[1];
-	  return "<span class=\"vowel vowel_" + vowelType + "\">" + format_recursive(str) + "</span>";
-	}
-
-	function format_vowel_italic(str) {
-	  var vowelType = vowel_list.find(function (e) {
-	    return str.indexOf(e[0]) >= 0;
-	  })[1];
-	  return "<em><span class=\"vowel vowel_" + vowelType + "\">" + format_recursive(str) + "</span></em>";
-	}
-
-	var format_list = [["*", "*", format_italic], ["[", "]", format_vowel], ["{", "}", format_vowel_italic]];
-
-	var vowel_list = [["a", "a"], ["i", "i"], ["u", "u"], ["e", "e"], ["o", "o"], ["A", "la"], ["I", "li"], ["U", "lu"], ["E", "le"], ["O", "lo"]];
 
 /***/ },
 /* 1 */
@@ -1820,6 +1760,276 @@
 
 	module.exports = [
 		[
+			"hostis, is",
+			"[m, f] 敵",
+			"",
+			[
+				[
+					"a",
+					"b"
+				]
+			],
+			[
+				"host-is",
+				"(host-em)",
+				"host-is",
+				"(host-I)",
+				"(host-e)",
+				"(host-Es)",
+				"(host-Es)",
+				"host-ium",
+				"(host-ibus)",
+				"(host-ibus)"
+			]
+		],
+		[
+			"vulpEs",
+			"[f] きつね ",
+			"",
+			[],
+			[
+				"vulp-Es",
+				"(vulp-em)",
+				"vulp-is",
+				"(vulp-I)",
+				"(vulp-e)",
+				"(vulp-Es)",
+				"(vulp-Es)",
+				"vulp-ium",
+				"(vulp-ibus)",
+				"(vulp-ibus)"
+			]
+		],
+		[
+			"mOns",
+			"[m] 山",
+			"",
+			[],
+			[
+				"mOn-s",
+				"(mont-em)",
+				"mont-is",
+				"(mont-I)",
+				"(mont-e)",
+				"(mont-Es)",
+				"(mont-Es)",
+				"mont-ium",
+				"(mont-ibus)",
+				"(mont-ibus)"
+			]
+		],
+		[
+			"ars",
+			"[f] 技術、芸術",
+			"",
+			[],
+			[
+				"ars",
+				"(art-em)",
+				"art-is",
+				"(art-I)",
+				"(art-e)",
+				"(art-Es)",
+				"(art-Es)",
+				"art-ium",
+				"(art-ibus)",
+				"(art-ibus)"
+			]
+		],
+		[
+			"mare",
+			"[n] 海",
+			"",
+			[],
+			[
+				"mar-e",
+				"*mar-e*",
+				"mar-is",
+				"(mar-I)",
+				"*mar-I*",
+				"*mar-ia*",
+				"(mar-ia)",
+				"mar-ium",
+				"(mar-ibus)",
+				"(mar-ibus)"
+			]
+		],
+		[
+			"animal",
+			"[n] 動物",
+			"",
+			[],
+			[
+				"animal",
+				"*animal*",
+				"animAl-is",
+				"(animAl-I)",
+				"*animAl-I*",
+				"*animAl-ia*",
+				"(animAl-ia)",
+				"animAl-ium",
+				"(animAl-ibus)",
+				"(animAl-ibus)"
+			]
+		],
+		[
+			"mercAtor",
+			"[m] 商人",
+			"",
+			[],
+			[
+				"mercAtor",
+				"(mercAtor-em)",
+				"mercAtOr-is",
+				"(mercAtOr-I)",
+				"(mercAtOr-e)",
+				"(mercAtOr-Es)",
+				"(mercAtOr-Es)",
+				"mercAtOr-um",
+				"(mercAtOr-ibus)",
+				"(mercAtOr-ibus)"
+			]
+		],
+		[
+			"homO",
+			"[m] 人間",
+			"",
+			[],
+			[
+				"homO",
+				"(homin-em)",
+				"homin-is",
+				"(homin-I)",
+				"(homin-e)",
+				"(homin-Es)",
+				"(homin-Es)",
+				"homin-um",
+				"(homin-ibus)",
+				"(homin-ibus)"
+			]
+		],
+		[
+			"nOmen",
+			"[n] 名",
+			"",
+			[],
+			[
+				"nOmen",
+				"*nOmen*",
+				"nOmin-is",
+				"(nOmin-I)",
+				"(nOmin-e)",
+				"*nOmin-a*",
+				"(nOmin-a)",
+				"nOmin-um",
+				"(nOmin-ibus)",
+				"(nOmin-ibus)"
+			]
+		],
+		[
+			"canis",
+			"[m, f] 犬",
+			"",
+			[
+				[
+					"juvenis, is",
+					"[m, f] 青年"
+				],
+				[
+					"senex, sen-is",
+					"[m, f] 老人"
+				]
+			],
+			[
+				"can-is",
+				"(can-em)",
+				"can-is",
+				"(can-I)",
+				"(can-e)",
+				"(can-Es)",
+				"(can-Es)",
+				"can-um",
+				"(can-ibus)",
+				"(can-ibus)"
+			]
+		],
+		[
+			"Juppiter",
+			"[m] ユピテル",
+			"",
+			[],
+			[
+				"Juppiter",
+				"(Jov-em)",
+				"Jov-is",
+				"(Jov-I)",
+				"(Jov-e)",
+				"(Jov-Es)",
+				"(Jov-Es)",
+				"Jov-um",
+				"(Jov-ibus)",
+				"(Jov-ibus)"
+			]
+		]
+	];
+
+/***/ },
+/* 4 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = renderVerb;
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _verb = __webpack_require__(5);
+
+	var _verb2 = _interopRequireDefault(_verb);
+
+	var _formatter = __webpack_require__(6);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var types = ["不定詞(現在)", "現在", "未完了", "未来"];
+
+	function renderVerb() {
+	  (0, _jquery2.default)("#verb>tbody").append("<tr></tr>");
+	  var h = (0, _jquery2.default)("#verb>tbody>tr");
+	  h.append("<th></th>");
+	  types.forEach(function (e) {
+	    h.append("<th>" + e + "</th>");
+	  });
+	  _verb2.default.forEach(function (e, i) {
+	    (0, _jquery2.default)("#verb>tbody").append("<tr class=\"conj\" id=\"verb_" + i + "\"></tr>");
+	    var r = (0, _jquery2.default)("#verb_" + i);
+	    r.append("<td class=\"header\"></td>");
+	    var d = (0, _jquery2.default)("#verb_" + i + ">td:last");
+	    d.append("<div class=\"type\">" + e[0] + "</div>");
+	    d.append("<div class=\"def\">" + (0, _formatter.format)(e[1], "normal") + "</div>");
+	    d.append("<div class=\"meaning\">" + e[2] + "</div>");
+	    e.slice(4).forEach(function (f) {
+	      r.append("<td></td>");
+	      var c = (0, _jquery2.default)("#verb_" + i + ">td:last");
+	      f.forEach(function (g) {
+	        c.append("" + (0, _formatter.format)(g, "verb"));
+	      });
+	    });
+	    (0, _jquery2.default)("#verb>tbody").append("<tr class=\"note\" id=\"verb" + i + "_note\"><td colspan=\"5\">" + e[3] + "</td></tr>");
+	  });
+	}
+
+/***/ },
+/* 5 */
+/***/ function(module, exports) {
+
+	module.exports = [
+		[
 			"be動詞",
 			"sum",
 			"ある、いる",
@@ -2051,6 +2261,151 @@
 			]
 		]
 	];
+
+/***/ },
+/* 6 */
+/***/ function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.format = format;
+	var replaceList = [["A", "ā"], ["I", "ī"], ["U", "ū"], ["E", "ē"], ["O", "ō"], ["/", "<br />"]];
+
+	function replace(str) {
+	  var s = str;
+	  replaceList.forEach(function (e) {
+	    return s = s.replace(e[0], e[1]);
+	  });
+	  return s;
+	}
+
+	function format(str, mode) {
+	  return "<div class=\"latin\">" + format_recursive(str, mode) + "</div>";
+	}
+
+	function format_recursive(str, mode) {
+	  var fl = format_list[mode];
+	  var buffer = "";
+	  var startIndex = 0;
+	  var listIndex = -1;
+
+	  var _loop = function _loop(i) {
+	    var c = str.charAt(i);
+	    if (listIndex == -1) {
+	      var li = fl.findIndex(function (e) {
+	        return c == e[0];
+	      });
+	      if (li >= 0) {
+	        buffer += replace(str.slice(startIndex, i));
+	        listIndex = li;
+	        startIndex = i + 1;
+	      }
+	    } else {
+	      if (c == fl[listIndex][1]) {
+	        buffer += fl[listIndex][2](str.slice(startIndex, i), mode);
+	        listIndex = -1;
+	        startIndex = i + 1;
+	      }
+	    }
+	  };
+
+	  for (var i = 0; i < str.length; i++) {
+	    _loop(i);
+	  }
+	  if (listIndex >= 0) buffer += str.slice(startIndex);else buffer += replace(str.slice(startIndex));
+	  return buffer;
+	}
+
+	function format_italic(str, mode) {
+	  return "<em>" + format_recursive(str, mode) + "</em>";
+	}
+
+	function format_default(str, mode) {
+	  return "<span class=\"default\">" + format_recursive(str, mode) + "</span>";
+	}
+
+	function format_vowel(str, mode) {
+	  var vowelType = vowel_list.find(function (e) {
+	    return str.indexOf(e[0]) >= 0;
+	  })[1];
+	  return "<span class=\"vowel vowel_" + vowelType + "\">" + format_recursive(str, mode) + "</span>";
+	}
+
+	function format_vowel_italic(str, mode) {
+	  var vowelType = vowel_list.find(function (e) {
+	    return str.indexOf(e[0]) >= 0;
+	  })[1];
+	  return "<em><span class=\"vowel vowel_" + vowelType + "\">" + format_recursive(str, mode) + "</span></em>";
+	}
+
+	var format_list = {
+	  "normal": [["*", "*", format_italic]],
+	  "verb": [["*", "*", format_italic], ["[", "]", format_vowel], ["{", "}", format_vowel_italic]],
+	  "noun3": [["*", "*", format_italic], ["(", ")", format_default]]
+	};
+
+	var vowel_list = [["a", "a"], ["i", "i"], ["u", "u"], ["e", "e"], ["o", "o"], ["A", "la"], ["I", "li"], ["U", "lu"], ["E", "le"], ["O", "lo"]];
+
+/***/ },
+/* 7 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	exports.default = renderNoun3;
+
+	var _jquery = __webpack_require__(1);
+
+	var _jquery2 = _interopRequireDefault(_jquery);
+
+	var _noun = __webpack_require__(3);
+
+	var _noun2 = _interopRequireDefault(_noun);
+
+	var _formatter = __webpack_require__(6);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	var types = ["単主", "単対", "単属", "単与", "単奪", "複主", "複対", "複属", "複与", "複奪"];
+	var template = ["さまざま", "-em<br />(主格, -im)", "-is", "-ī", "-e<br />(-ī)", "-ēs<br />(-a, -ia)", "主格", "-(i)um", "-ibus", "-ibus"];
+
+	function renderNoun3() {
+	  (0, _jquery2.default)("#noun3>tbody").append("<tr></tr>");
+	  var h = (0, _jquery2.default)("#noun3>tbody>tr");
+
+	  h.append("<th></th>");
+	  types.forEach(function (e, i) {
+	    if (isImportantColumn(i)) h.append("<th class=\"important\">" + e + "</th>");else h.append("<th>" + e + "</th>");
+	  });
+	  (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"conj\" id=\"noun3_header\"></tr>");
+	  var ht = (0, _jquery2.default)("#noun3_header");
+	  ht.append("<td></td>");
+	  template.forEach(function (e, i) {
+	    if (isImportantColumn(i)) ht.append("<td class=\"important\">" + e + "</td>");else ht.append("<td>" + e + "</td>");
+	  });
+	  _noun2.default.forEach(function (e, i) {
+	    (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"conj\" id=\"noun3_" + i + "\"></tr>");
+	    var r = (0, _jquery2.default)("#noun3_" + i);
+	    r.append("<td class=\"header\"></td>");
+	    var d = (0, _jquery2.default)("#noun3_" + i + ">td:last");
+	    d.append("<div class=\"def\">" + (0, _formatter.format)(e[0], "normal") + "</div>");
+	    d.append("<div class=\"meaning\">" + e[1] + "</div>");
+	    e[4].forEach(function (f, fi) {
+	      if (isImportantColumn(fi)) r.append("<td class=\"important\">" + (0, _formatter.format)(f, "noun3") + "</td>");else r.append("<td>" + (0, _formatter.format)(f, "noun3") + "</td>");
+	    });
+	    (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"note\" id=\"verb" + i + "_note\"><td colspan=\"11\">" + e[2] + "</td></tr>");
+	  });
+	}
+
+	function isImportantColumn(i) {
+	  return i == 0 || i == 2 || i == 7;
+	}
 
 /***/ }
 /******/ ]);

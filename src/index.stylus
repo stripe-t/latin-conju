@@ -4,9 +4,13 @@ color_u = rgb(74, 158, 85)
 color_e = rgb(7, 148, 206)
 color_o = rgb(156, 41, 213)
 
+body
+  min-width 1000px
+
 table
   width 100%
   border-collapse collapse
+  table-layout fixed
 
 th
   border-top 1px solid #000
@@ -28,8 +32,15 @@ td, th
   border-left 1px dotted #BBB
   border-right 1px dotted #BBB
 
+#noun3_header
+  background-color #F8F8F8
+  border-bottom 1px solid #000
+
 .header
   background-color #F8F8F8
+
+td.important, th.important
+  background-color: #E0E0E0
 
 .latin
   font-family "TexGyreSchola"
@@ -51,6 +62,10 @@ for v in a i u e o
     //color darken(color_ + v, 20%)
     color color_ + v
     text-shadow 1px 1px 0px darken(color_ + v, 30%)
+
+.latin .default
+  color: #BBB
+  font-size 12px
 
 .def .latin
   font-size 16px
