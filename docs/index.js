@@ -69,7 +69,7 @@
 
 	(0, _jquery2.default)(function () {
 	  tabs.forEach(function (e) {
-	    (0, _jquery2.default)("#tabs").append("<a href=\"#\">" + e[1] + "</a>");
+	    (0, _jquery2.default)("#tabs").append("<a class=\"mode_button\" href=\"#\">" + e[1] + "</a>");
 	    (0, _jquery2.default)("#tabs>a:last").on("click", function () {
 	      (0, _jquery2.default)("#" + currentTab).hide();
 	      (0, _jquery2.default)("#" + e[0]).show();
@@ -1763,12 +1763,12 @@
 			0,
 			"hostis, is",
 			"[m, f] 敵",
-			"-ium型基本形 -is, -is型",
+			"-ium型基本形 -is, -is型\n中性は存在しない",
 			[
-				[
-					"a",
-					"b"
-				]
+				[],
+				[],
+				[],
+				[]
 			],
 			[
 				"host-is",
@@ -1788,7 +1788,12 @@
 			"vulpEs",
 			"[f] きつね ",
 			"-ium型基本形 -es, -is型",
-			[],
+			[
+				[],
+				[],
+				[],
+				[]
+			],
 			[
 				"vulp-Es",
 				"(vulp-em)",
@@ -1807,7 +1812,12 @@
 			"mOns",
 			"[m] 山",
 			"-ium型基本形 -s, -is型",
-			[],
+			[
+				[],
+				[],
+				[],
+				[]
+			],
 			[
 				"mOn-s",
 				"(mont-em)",
@@ -1826,7 +1836,12 @@
 			"ars",
 			"[f] 技術、芸術",
 			"-ium型基本形 語幹変化をする-, -is型",
-			[],
+			[
+				[],
+				[],
+				[],
+				[]
+			],
 			[
 				"ars",
 				"(art-em)",
@@ -1845,7 +1860,12 @@
 			"mare",
 			"[n] 海",
 			"-ium型例外 -e, -is型\n単対が単主と同じ",
-			[],
+			[
+				[],
+				[],
+				[],
+				[]
+			],
 			[
 				"mar-e",
 				"*mar-e*",
@@ -1864,7 +1884,12 @@
 			"animal",
 			"[n] 動物",
 			"-ium型例外 語幹変化をしない-, -is型",
-			[],
+			[
+				[],
+				[],
+				[],
+				[]
+			],
 			[
 				"animal",
 				"*animal*",
@@ -1882,8 +1907,108 @@
 			0,
 			"mercAtor",
 			"[m] 商人",
-			"-um型基本形 語幹変化をしない-, -is型",
-			[],
+			"-um型基本形 語幹変化をしない流音幹-, -is型",
+			[
+				[
+					[
+						"amor, amOris",
+						"愛"
+					],
+					[
+						"Caesar, Caesaris",
+						"カエサル"
+					],
+					[
+						"clAmor, clAmOris",
+						"叫び、歓声"
+					],
+					[
+						"color, colOris",
+						"色"
+					],
+					[
+						"cOnsul, cOnsulis",
+						"古代ローマの執政官"
+					],
+					[
+						"dolor, dolOris",
+						"痛み、苦しみ"
+					],
+					[
+						"flOs, flOris",
+						"花"
+					],
+					[
+						"fUr, fUris",
+						"泥棒"
+					],
+					[
+						"honos (honor), honOris",
+						"名誉"
+					],
+					[
+						"imperAtor, imperAtOris",
+						"命令者、大元帥"
+					],
+					[
+						"labor, labOris",
+						"労働"
+					],
+					[
+						"mOs, mOris",
+						"習慣"
+					],
+					[
+						"odor, odOris",
+						"匂い"
+					],
+					[
+						"senAtor, senAtOris",
+						"元老院議員"
+					],
+					[
+						"sOl, sOlis",
+						"太陽"
+					],
+					[
+						"OrAtor, OrAtOris",
+						"雄弁家"
+					],
+					[
+						"victor, victOris",
+						"勝利者"
+					]
+				],
+				[
+					[
+						"arbor, arbOris",
+						"木"
+					],
+					[
+						"mulier, mulieris",
+						"夫人"
+					],
+					[
+						"soror, sorOris",
+						"姉妹"
+					],
+					[
+						"uxor, uxOris",
+						"妻"
+					]
+				],
+				[],
+				[
+					[
+						"augur, auguris",
+						"鳥占官"
+					],
+					[
+						"exsul, exsulis",
+						"追放された人"
+					]
+				]
+			],
 			[
 				"mercAtor",
 				"(mercAtor-em)",
@@ -1900,9 +2025,84 @@
 		[
 			1,
 			"homO",
-			"[m] 人間",
+			"[m, f] 人間",
 			"-um型基本形 語幹変化をするn語幹の-, -is型",
-			[],
+			[
+				[
+					[
+						"CicerO, CicerOnis",
+						"キケロー"
+					],
+					[
+						"latrO, latrOnis",
+						"強盗"
+					],
+					[
+						"leO, leOnis",
+						"ライオン"
+					],
+					[
+						"sermO, semOnis",
+						"言葉、説法、会話"
+					]
+				],
+				[
+					[
+						"formIdO, formIdinis",
+						"恐怖"
+					],
+					[
+						"grandO, grandinis",
+						"雹"
+					],
+					[
+						"imAgO, imAginis",
+						"像、映像"
+					],
+					[
+						"legiO, legiOnis",
+						"軍団"
+					],
+					[
+						"libIdO, libIdinis",
+						"欲望、気まぐれ"
+					],
+					[
+						"multitUdO, multitUdinis",
+						"多数"
+					],
+					[
+						"natiO, natiOnis",
+						"出生、種族、人種、部族、国民"
+					],
+					[
+						"opiniO, opiniOnis",
+						"意見"
+					],
+					[
+						"oratiO, oratiOnis",
+						"演説"
+					],
+					[
+						"ordO, ordinis",
+						"順序、列、秩序"
+					],
+					[
+						"pulchritUdO, pulchritUdinis",
+						"美"
+					],
+					[
+						"regiO, regiOnis",
+						"地方"
+					],
+					[
+						"virgO, virginis",
+						"処女"
+					]
+				],
+				[],
+				[]
+			],
 			[
 				"homO",
 				"(homin-em)",
@@ -1922,13 +2122,18 @@
 			"[m, f] 犬",
 			"-um型基本形 -is, -is型(-iumの-is, -isの例外)",
 			[
+				[],
+				[],
+				[],
 				[
-					"juvenis, is",
-					"[m, f] 青年"
-				],
-				[
-					"senex, sen-is",
-					"[m, f] 老人"
+					[
+						"juvenis, is",
+						"青年"
+					],
+					[
+						"senex, sen-is",
+						"老人"
+					]
 				]
 			],
 			[
@@ -1949,7 +2154,12 @@
 			"Juppiter",
 			"[m] ユピテル",
 			"-um型基本形 語幹変化が例外的",
-			[],
+			[
+				[],
+				[],
+				[],
+				[]
+			],
 			[
 				"Juppiter",
 				"(Jov-em)",
@@ -1967,8 +2177,74 @@
 			0,
 			"nOmen",
 			"[n] 名",
-			"-um型例外 語幹変化をする-, -is型\n単対が単主と同じ、複主が-a\n中性名詞はこれらしい",
-			[],
+			"-um型例外 語幹変化をする中性-, -is型\n単対が単主と同じ、複主が-a\n中性の-um型はこの活用",
+			[
+				[],
+				[],
+				[
+					[
+						"agmen, agminis",
+						"動き、行軍縦隊"
+					],
+					[
+						"caput, capitis",
+						"頭"
+					],
+					[
+						"carmen, carminis",
+						"歌"
+					],
+					[
+						"corpus, corporis",
+						"体"
+					],
+					[
+						"frIgus, frIgoris",
+						"寒さ"
+					],
+					[
+						"genus, generis",
+						"出自、家門、種属"
+					],
+					[
+						"iter, itineris",
+						"旅"
+					],
+					[
+						"iUs, iUris",
+						"法"
+					],
+					[
+						"lItus, lItoris",
+						"岸"
+					],
+					[
+						"lUmen, lUminis",
+						"光"
+					],
+					[
+						"opus, operis",
+						"仕事、努力、事業、著作物"
+					],
+					[
+						"rUs, rUris",
+						"田野、田舎"
+					],
+					[
+						"sIdus, sIderis",
+						"星座"
+					],
+					[
+						"tempus, tempOris",
+						"時間、時代、時勢、時機"
+					],
+					[
+						"vulnus, vulneris",
+						"傷"
+					]
+				],
+				[]
+			],
 			[
 				"nOmen",
 				"*nOmen*",
@@ -2283,7 +2559,7 @@
 	  value: true
 	});
 	exports.format = format;
-	var replaceList = [["A", "ā"], ["I", "ī"], ["U", "ū"], ["E", "ē"], ["O", "ō"], ["/", "<br />"]];
+	var replaceList = [[/A/g, "ā"], [/I/g, "ī"], [/U/g, "ū"], [/E/g, "ē"], [/O/g, "ō"], [/\//g, "<br />"]];
 
 	function replace(str) {
 	  var s = str;
@@ -2386,6 +2662,10 @@
 	var types = ["単主", "単対", "単属", "単与", "単奪", "複主", "複対", "複属", "複与", "複奪"];
 	var template = ["様々", "-em<br />(主格, -im)", "-is<br />語幹様々", "-ī", "-e<br />(-ī)", "-ēs<br />(-a, -ia)", "主格", "-(i)um", "-ibus", "-ibus"];
 	var expandState = [];
+	var noteExpandState = [];
+
+	var genders = ["masculine", "feminine", "neuter", "both"];
+	var gender_template = ["M", "F", "N", "M/F"];
 
 	function renderNoun3() {
 	  var data = [];
@@ -2400,6 +2680,7 @@
 	    parent[e[0]].push(d);
 	    parent.push(d.children);
 	    expandState[i] = false;
+	    noteExpandState[i] = false;
 	  });
 
 	  (0, _jquery2.default)("#noun3>tbody").append("<tr></tr>");
@@ -2448,7 +2729,7 @@
 	          children.forEach(function (ce) {
 	            var ci = ce.index;
 	            (0, _jquery2.default)("#noun3_" + ci).show();
-	            (0, _jquery2.default)("#noun3_" + ci + "_note").show();
+	            if (noteExpandState[ci]) (0, _jquery2.default)("#noun3_" + ci + "_note").show();
 	            btn.text("-");
 	          });
 	        }
@@ -2457,17 +2738,43 @@
 	    })();
 	  }
 	  r.append("<td class=\"header\"></td>");
+	  (0, _jquery2.default)("#noun3_" + index + ">td:last").on("click", function () {
+	    if (noteExpandState[index]) {
+	      (0, _jquery2.default)("#noun3_" + index + "_note").hide();
+	    } else {
+	      (0, _jquery2.default)("#noun3_" + index + "_note").show();
+	    }
+	    noteExpandState[index] = !noteExpandState[index];
+	  });
+
 	  var d = (0, _jquery2.default)("#noun3_" + index + ">td:last");
 	  d.append("<div class=\"def\">" + (0, _formatter.format)(ed[0], "normal") + "</div>");
 	  d.append("<div class=\"meaning\">" + ed[1] + "</div>");
 	  ed[4].forEach(function (f, fi) {
 	    if (isImportantColumn(fi)) r.append("<td class=\"important\">" + (0, _formatter.format)(f, "noun3") + "</td>");else r.append("<td>" + (0, _formatter.format)(f, "noun3") + "</td>");
 	  });
-	  (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"note note_l" + level + "\" id=\"noun3_" + index + "_note\"><td></td><td class=\"note_body\" colspan=\"11\">" + ed[2].replace(/\n/g, "<br />") + "</td></tr>");
+
+	  (0, _jquery2.default)("#noun3>tbody").append("<tr class=\"note note_l" + level + "\" id=\"noun3_" + index + "_note\"><td></td><td class=\"note_body\" colspan=\"11\"></td></tr>");
+	  var note = (0, _jquery2.default)("#noun3_" + index + "_note>.note_body");
+	  note.append("<div class=\"note_body_note\">" + ed[2].replace(/\n/g, "<br />") + "</div>");
+	  note.append("<div class=\"note_body_ref\"></div>");
+	  var ref = (0, _jquery2.default)("#noun3_" + index + "_note .note_body_ref");
+	  genders.forEach(function (eg, i) {
+	    if (ed[3][i].length != 0) {
+	      (function () {
+	        ref.append("<div class=\"ref_box ref_box_" + eg + "\"><div class=\"ref_header\">" + gender_template[i] + "</div><dl></dl></div>");
+	        var box = (0, _jquery2.default)(".ref_box:last>dl");
+	        ed[3][i].forEach(function (ew) {
+	          box.append("<div class=\"d_group\"><dt>" + (0, _formatter.format)(ew[0], "normal") + "</dt><dd>" + ew[1] + "</dd></div>");
+	        });
+	      })();
+	    }
+	  });
+
 	  if (level != 0) {
 	    r.hide();
-	    (0, _jquery2.default)("#noun3_" + index + "_note").hide();
 	  }
+	  (0, _jquery2.default)("#noun3_" + index + "_note").hide();
 	  children.forEach(function (e) {
 	    return renderRow(e, level + 1);
 	  });

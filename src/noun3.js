@@ -6,6 +6,10 @@ const types = ["単主", "単対", "単属", "単与", "単奪", "複主", "複�
 const template = ["様々", "-em<br />(主格, -im)", "-is<br />語幹様々", "-ī", "-e<br />(-ī)",
   "-ēs<br />(-a, -ia)", "主格", "-(i)um", "-ibus", "-ibus"]
 let expandState = []
+let noteExpandState = []
+
+const genders = ["masculine", "feminine", "neuter", "both"]
+const gender_template = ["M", "F", "N", "M/F"]
 
 export default function renderNoun3() {
   const data = []
@@ -20,6 +24,7 @@ export default function renderNoun3() {
     parent[e[0]].push(d)
     parent.push(d.children)
     expandState[i] = false
+    noteExpandState[i] = false
   })
 
   $("#noun3>tbody").append(`<tr></tr>`)
@@ -69,7 +74,7 @@ function renderRow(e, level) {
         children.forEach((ce) => {
           const ci = ce.index
           $(`#noun3_${ci}`).show()
-          $(`#noun3_${ci}_note`).show()
+          if(noteExpandState[ci]) $(`#noun3_${ci}_note`).show()
           btn.text("-")
         })
       }
@@ -77,6 +82,15 @@ function renderRow(e, level) {
     })
   }
   r.append(`<td class="header"></td>`)
+  $(`#noun3_${index}>td:last`).on("click", () => {
+    if(noteExpandState[index]) {
+      $(`#noun3_${index}_note`).hide()
+    } else {
+      $(`#noun3_${index}_note`).show()
+    }
+    noteExpandState[index] = !noteExpandState[index]
+  })
+
   const d = $(`#noun3_${index}>td:last`)
   d.append(`<div class="def">${format(ed[0], "normal")}</div>`)
   d.append(`<div class="meaning">${ed[1]}</div>`)
@@ -84,11 +98,26 @@ function renderRow(e, level) {
     if(isImportantColumn(fi)) r.append(`<td class="important">${format(f, "noun3")}</td>`)
     else r.append(`<td>${format(f, "noun3")}</td>`)
   })
-  $("#noun3>tbody").append(`<tr class="note note_l${level}" id="noun3_${index}_note"><td></td><td class="note_body" colspan="11">${ed[2].replace(/\n/g, "<br />")}</td></tr>`)
+
+  $("#noun3>tbody").append(`<tr class="note note_l${level}" id="noun3_${index}_note"><td></td><td class="note_body" colspan="11"></td></tr>`)
+  const note = $(`#noun3_${index}_note>.note_body`)
+  note.append(`<div class="note_body_note">${ed[2].replace(/\n/g, "<br />")}</div>`)
+  note.append(`<div class="note_body_ref"></div>`)
+  const ref = $(`#noun3_${index}_note .note_body_ref`)
+  genders.forEach((eg, i) => {
+    if(ed[3][i].length != 0) {
+      ref.append(`<div class="ref_box ref_box_${eg}"><div class="ref_header">${gender_template[i]}</div><dl></dl></div>`)
+      const box = $(`.ref_box:last>dl`)
+      ed[3][i].forEach((ew) => {
+        box.append(`<div class="d_group"><dt>${format(ew[0], "normal")}</dt><dd>${ew[1]}</dd></div>`)
+      })
+    }
+  })
+
   if(level != 0) {
     r.hide()
-    $(`#noun3_${index}_note`).hide()
   }
+  $(`#noun3_${index}_note`).hide()
   children.forEach((e) => renderRow(e, level + 1))
 }
 

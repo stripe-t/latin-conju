@@ -1,6 +1,13 @@
 body {
   min-width: 1000px;
 }
+a.mode_button {
+  padding: 2px;
+  color: #000;
+  text-decoration: none;
+  background-color: #eee;
+  border: 2px outset #eee;
+}
 table {
   width: 100%;
   border-collapse: collapse;
@@ -53,6 +60,12 @@ th.important {
 }
 #noun3 .latin em {
   font-size: 20px;
+}
+#noun3 .header {
+  cursor: pointer;
+}
+#noun3 .header:hover {
+  background-color: #fff;
 }
 .latin .vowel {
   font-size: 20px;
@@ -115,6 +128,73 @@ th.important {
 .conj_l1>td:first-child,
 .note_l1>td:first-child {
   background-color: #ccc;
+}
+.note_body_ref {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+.ref_expand {
+  margin-right: 5px;
+  padding: 0px 5px;
+  border: 1px solid #000;
+  background-color: #ccc;
+  cursor: pointer;
+}
+.ref_box {
+  flex: 1;
+}
+.ref_box dl {
+  margin: 3px 0px;
+  display: table;
+  width: 100%;
+}
+.ref_box .d_group {
+  display: table-row;
+  border-bottom: 1px dotted rgba(0,0,0,0.2);
+}
+.ref_box dt {
+  display: table-cell;
+  padding: 0px 5px;
+}
+.ref_box dd {
+  display: table-cell;
+  padding: 0px 5px;
+}
+.ref_header {
+  text-align: center;
+}
+.ref_box_masculine {
+  border: 1px solid #4166e0;
+  border-radius: 2px;
+  background-color: #ecf0fc;
+}
+.ref_box_masculine .ref_header {
+  background-color: #c6d1f6;
+}
+.ref_box_feminine {
+  border: 1px solid #ff3aa3;
+  border-radius: 2px;
+  background-color: #ffebf6;
+}
+.ref_box_feminine .ref_header {
+  background-color: #ffc4e3;
+}
+.ref_box_neuter {
+  border: 1px solid #f2d830;
+  border-radius: 2px;
+  background-color: #fefbea;
+}
+.ref_box_neuter .ref_header {
+  background-color: #fbf3c1;
+}
+.ref_box_both {
+  border: 1px solid #30f28e;
+  border-radius: 2px;
+  background-color: #eafef4;
+}
+.ref_box_both .ref_header {
+  background-color: #c1fbdd;
 }
 @font-face {
   font-family: "TeXGyreSchola";

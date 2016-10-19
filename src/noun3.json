@@ -1,70 +1,175 @@
 [
   [
-    0, "hostis, is", "[m, f] 敵", "-ium型基本形 -is, -is型",
+    0, "hostis, is", "[m, f] 敵", "-ium型基本形 -is, -is型\n中性は存在しない",
     [
-      ["a", "b"]
+      [],
+      [],
+      [],
+      []
     ],
     ["host-is", "(host-em)", "host-is", "(host-I)", "(host-e)", "(host-Es)", "(host-Es)", "host-ium", "(host-ibus)", "(host-ibus)"]
   ],
   [
     1, "vulpEs", "[f] きつね ", "-ium型基本形 -es, -is型",
     [
+      [],
+      [],
+      [],
+      []
     ],
     ["vulp-Es", "(vulp-em)", "vulp-is", "(vulp-I)", "(vulp-e)", "(vulp-Es)", "(vulp-Es)", "vulp-ium", "(vulp-ibus)", "(vulp-ibus)"]
   ],
   [
     1, "mOns", "[m] 山", "-ium型基本形 -s, -is型",
     [
+      [],
+      [],
+      [],
+      []
     ],
     ["mOn-s", "(mont-em)", "mont-is", "(mont-I)", "(mont-e)", "(mont-Es)", "(mont-Es)", "mont-ium", "(mont-ibus)", "(mont-ibus)"]
   ],
   [
     1, "ars", "[f] 技術、芸術", "-ium型基本形 語幹変化をする-, -is型",
     [
+      [],
+      [],
+      [],
+      []
     ],
     ["ars", "(art-em)", "art-is", "(art-I)", "(art-e)", "(art-Es)", "(art-Es)", "art-ium", "(art-ibus)", "(art-ibus)"]
   ],
   [
     0, "mare", "[n] 海", "-ium型例外 -e, -is型\n単対が単主と同じ",
     [
+      [],
+      [],
+      [],
+      []
     ],
     ["mar-e", "*mar-e*", "mar-is", "(mar-I)", "*mar-I*", "*mar-ia*", "(mar-ia)", "mar-ium", "(mar-ibus)", "(mar-ibus)"]
   ],
   [
     1, "animal", "[n] 動物", "-ium型例外 語幹変化をしない-, -is型",
     [
+      [],
+      [],
+      [],
+      []
     ],
     ["animal", "*animal*", "animAl-is", "(animAl-I)", "*animAl-I*", "*animAl-ia*", "(animAl-ia)", "animAl-ium", "(animAl-ibus)", "(animAl-ibus)"]
   ],
   [
-    0, "mercAtor", "[m] 商人", "-um型基本形 語幹変化をしない-, -is型",
+    0, "mercAtor", "[m] 商人", "-um型基本形 語幹変化をしない流音幹-, -is型",
     [
+      [
+        ["amor, amOris", "愛"],
+        ["Caesar, Caesaris", "カエサル"],
+        ["clAmor, clAmOris", "叫び、歓声"],
+        ["color, colOris", "色"],
+        ["cOnsul, cOnsulis", "古代ローマの執政官"],
+        ["dolor, dolOris", "痛み、苦しみ"],
+        ["flOs, flOris", "花"],
+        ["fUr, fUris", "泥棒"],
+        ["honos (honor), honOris", "名誉"],
+        ["imperAtor, imperAtOris", "命令者、大元帥"],
+        ["labor, labOris", "労働"],
+        ["mOs, mOris", "習慣"],
+        ["odor, odOris", "匂い"],
+        ["senAtor, senAtOris", "元老院議員"],
+        ["sOl, sOlis", "太陽"],
+        ["OrAtor, OrAtOris", "雄弁家"],
+        ["victor, victOris", "勝利者"]
+      ],
+      [
+        ["arbor, arbOris", "木"],
+        ["mulier, mulieris", "夫人"],
+        ["soror, sorOris", "姉妹"],
+        ["uxor, uxOris", "妻"]
+      ],
+      [],
+      [
+        ["augur, auguris", "鳥占官"],
+        ["exsul, exsulis", "追放された人"]
+      ]
     ],
     ["mercAtor", "(mercAtor-em)", "mercAtOr-is", "(mercAtOr-I)", "(mercAtOr-e)", "(mercAtOr-Es)", "(mercAtOr-Es)", "mercAtOr-um", "(mercAtOr-ibus)", "(mercAtOr-ibus)"]
   ],
   [
-    1, "homO", "[m] 人間", "-um型基本形 語幹変化をするn語幹の-, -is型",
+    1, "homO", "[m, f] 人間", "-um型基本形 語幹変化をするn語幹の-, -is型",
     [
+      [
+        ["CicerO, CicerOnis", "キケロー"],
+        ["latrO, latrOnis", "強盗"],
+        ["leO, leOnis", "ライオン"],
+        ["sermO, semOnis", "言葉、説法、会話"]
+      ],
+      [
+        ["formIdO, formIdinis", "恐怖"],
+        ["grandO, grandinis", "雹"],
+        ["imAgO, imAginis", "像、映像"],
+        ["legiO, legiOnis", "軍団"],
+        ["libIdO, libIdinis", "欲望、気まぐれ"],
+        ["multitUdO, multitUdinis", "多数"],
+        ["natiO, natiOnis", "出生、種族、人種、部族、国民"],
+        ["opiniO, opiniOnis", "意見"],
+        ["oratiO, oratiOnis", "演説"],
+        ["ordO, ordinis", "順序、列、秩序"],
+        ["pulchritUdO, pulchritUdinis", "美"],
+        ["regiO, regiOnis", "地方"],
+        ["virgO, virginis", "処女"]
+      ],
+      [],
+      []
     ],
     ["homO", "(homin-em)", "homin-is", "(homin-I)", "(homin-e)", "(homin-Es)", "(homin-Es)", "homin-um", "(homin-ibus)", "(homin-ibus)"]
   ],
   [
     1, "canis", "[m, f] 犬", "-um型基本形 -is, -is型(-iumの-is, -isの例外)",
     [
-      ["juvenis, is", "[m, f] 青年"],
-      ["senex, sen-is", "[m, f] 老人"]
+      [],
+      [],
+      [],
+      [
+        ["juvenis, is", "青年"],
+        ["senex, sen-is", "老人"]
+      ]
     ],
     ["can-is", "(can-em)", "can-is", "(can-I)", "(can-e)", "(can-Es)", "(can-Es)", "can-um", "(can-ibus)", "(can-ibus)"]
   ],
   [
     1, "Juppiter", "[m] ユピテル", "-um型基本形 語幹変化が例外的",
     [
+      [],
+      [],
+      [],
+      []
     ],
     ["Juppiter", "(Jov-em)", "Jov-is", "(Jov-I)", "(Jov-e)", "(Jov-Es)", "(Jov-Es)", "Jov-um", "(Jov-ibus)", "(Jov-ibus)"]
   ],
   [
-    0, "nOmen", "[n] 名", "-um型例外 語幹変化をする-, -is型\n単対が単主と同じ、複主が-a\n中性名詞はこれらしい",
+    0, "nOmen", "[n] 名", "-um型例外 語幹変化をする中性-, -is型\n単対が単主と同じ、複主が-a\n中性の-um型はこの活用",
     [
+      [],
+      [],
+      [
+        ["agmen, agminis", "動き、行軍縦隊"],
+        ["caput, capitis", "頭"],
+        ["carmen, carminis", "歌"],
+        ["corpus, corporis", "体"],
+        ["frIgus, frIgoris", "寒さ"],
+        ["genus, generis", "出自、家門、種属"],
+        ["iter, itineris", "旅"],
+        ["iUs, iUris", "法"],
+        ["lItus, lItoris", "岸"],
+        ["lUmen, lUminis", "光"],
+        ["opus, operis", "仕事、努力、事業、著作物"],
+        ["rUs, rUris", "田野、田舎"],
+        ["sIdus, sIderis", "星座"],
+        ["tempus, tempOris", "時間、時代、時勢、時機"],
+        ["vulnus, vulneris", "傷"]
+      ],
+      []
     ],
     ["nOmen", "*nOmen*", "nOmin-is", "(nOmin-I)", "(nOmin-e)", "*nOmin-a*", "(nOmin-a)", "nOmin-um", "(nOmin-ibus)", "(nOmin-ibus)"]
   ]

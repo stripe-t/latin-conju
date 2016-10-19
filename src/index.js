@@ -8,7 +8,7 @@ let currentTab = "noun3"
 
 $(() => {
   tabs.forEach((e) => {
-    $("#tabs").append(`<a href="#">${e[1]}</a>`)
+    $("#tabs").append(`<a class="mode_button" href="#">${e[1]}</a>`)
     $("#tabs>a:last").on("click", () => {
       $(`#${currentTab}`).hide()
       $(`#${e[0]}`).show()

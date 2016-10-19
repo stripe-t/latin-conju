@@ -4,8 +4,20 @@ color_u = rgb(74, 158, 85)
 color_e = rgb(7, 148, 206)
 color_o = rgb(156, 41, 213)
 
+color_masculine = #4166E0
+color_feminine = #FF3AA3
+color_neuter = #F2D830
+color_both = #30F28E
+
 body
   min-width 1000px
+
+a.mode_button
+  padding 2px
+  color #000
+  text-decoration none
+  background-color #EEE
+  border 2px outset #EEE
 
 table
   width 100%
@@ -44,7 +56,7 @@ td, th
   background-color #F8F8F8
 
 td.important, th.important
-  background-color: #E0E0E0
+  background-color #E0E0E0
 
 .latin
   font-family "TexGyreSchola"
@@ -57,6 +69,12 @@ td.important, th.important
 
 #noun3 .latin em
   font-size 20px
+
+#noun3 .header
+  cursor pointer
+  
+#noun3 .header:hover
+  background-color #FFF
 
 .latin .vowel
   font-size 20px
@@ -87,6 +105,50 @@ for v in a i u e o
 
 .conj_l1>td:first-child, .note_l1>td:first-child
   background-color #CCC
+
+.note_body_ref
+  display flex
+  flex-wrap wrap
+  align-items flex-start
+
+.ref_expand
+  margin-right 5px
+  padding 0px 5px
+  border 1px solid #000
+  background-color #CCC
+  cursor pointer
+
+.ref_box
+  flex 1
+
+  dl
+    margin 3px 0px
+    display table
+    width 100%
+
+  .d_group
+    display table-row
+    border-bottom 1px dotted rgba(0, 0, 0, 0.2)
+
+  dt
+    display table-cell
+    padding 0px 5px
+
+  dd
+    display table-cell
+    padding 0px 5px
+
+.ref_header
+  text-align center
+
+
+for g in masculine feminine neuter both
+  .ref_box_{g}
+    border 1px solid color_ + g
+    border-radius 2px
+    background-color lighten(color_ + g, 90%)
+    .ref_header
+      background-color lighten(color_ + g, 70%)
 
 @font-face
   font-family "TeXGyreSchola"
