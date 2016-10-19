@@ -10,32 +10,44 @@
     ["host-is", "(host-em)", "host-is", "(host-I)", "(host-e)", "(host-Es)", "(host-Es)", "host-ium", "(host-ibus)", "(host-ibus)"]
   ],
   [
-    1, "vulpEs", "[f] きつね ", "-ium型基本形 -es, -is型",
+    1, "vulpEs", "[f] きつね ", "-ium型基本形 -es/-ēs, -is型",
     [
       [],
-      [],
+      [
+        ["aedEs, aedis", "家"],
+        ["caedEs, caedis", "殺害、虐殺"],
+        ["clAdes, clAdis", "損害"],
+        ["fames, famis", "空腹、飢餓"],
+        ["nUbEs, nUbis", "雲"]
+      ],
       [],
       []
     ],
     ["vulp-Es", "(vulp-em)", "vulp-is", "(vulp-I)", "(vulp-e)", "(vulp-Es)", "(vulp-Es)", "vulp-ium", "(vulp-ibus)", "(vulp-ibus)"]
   ],
   [
-    1, "mOns", "[m] 山", "-ium型基本形 -s, -is型",
+    1, "ars", "[f] 技術、芸術", "-ium型基本形 -s, -is型",
     [
+      [
+        ["dEns, dentis", "歯"],
+        ["fOns, fontis", "泉、源"],
+        ["mOns, montis", "山"]
+      ],
+      [
+        ["frons, frondis", "木の葉"],
+        ["frOns, frontis", "額"],
+        ["gEns, gentis", "種族、人種"],
+        ["mors, mortis", "死"],
+        ["nox, noctis", "夜"],
+        ["pars, partis", "部分"],
+        ["serpEns, serpentis", "蛇"],
+        ["urbs, urbis", "都"]
+      ],
       [],
-      [],
-      [],
-      []
-    ],
-    ["mOn-s", "(mont-em)", "mont-is", "(mont-I)", "(mont-e)", "(mont-Es)", "(mont-Es)", "mont-ium", "(mont-ibus)", "(mont-ibus)"]
-  ],
-  [
-    1, "ars", "[f] 技術、芸術", "-ium型基本形 語幹変化をする-, -is型",
-    [
-      [],
-      [],
-      [],
-      []
+      [
+        ["adulEscEns, adulEscentis", "青年"],
+        ["InfAns, Infantis", "幼児"]
+      ]
     ],
     ["ars", "(art-em)", "art-is", "(art-I)", "(art-e)", "(art-Es)", "(art-Es)", "art-ium", "(art-ibus)", "(art-ibus)"]
   ],
@@ -44,7 +56,10 @@
     [
       [],
       [],
-      [],
+      [
+        ["cubIle, cubIlis", "寝台"],
+        ["conclAve, conclAvis", "部屋"]
+      ],
       []
     ],
     ["mar-e", "*mar-e*", "mar-is", "(mar-I)", "*mar-I*", "*mar-ia*", "(mar-ia)", "mar-ium", "(mar-ibus)", "(mar-ibus)"]
@@ -54,7 +69,12 @@
     [
       [],
       [],
-      [],
+      [
+        ["calcar, calcAris", "拍車"],
+        ["exemplar, exemplAris", "写し、模範"],
+        ["tribUnal, tribUnAlis", "高段、法廷"],
+        ["vectIgal, vectIgAlis", "税"]
+      ],
       []
     ],
     ["animal", "*animal*", "animAl-is", "(animAl-I)", "*animAl-I*", "*animAl-ia*", "(animAl-ia)", "animAl-ium", "(animAl-ibus)", "(animAl-ibus)"]
@@ -131,8 +151,7 @@
       [],
       [],
       [
-        ["juvenis, is", "青年"],
-        ["senex, sen-is", "老人"]
+        ["juvenis, is", "青年"]
       ]
     ],
     ["can-is", "(can-em)", "can-is", "(can-I)", "(can-e)", "(can-Es)", "(can-Es)", "can-um", "(can-ibus)", "(can-ibus)"]

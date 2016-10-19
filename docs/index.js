@@ -1787,10 +1787,31 @@
 			1,
 			"vulpEs",
 			"[f] きつね ",
-			"-ium型基本形 -es, -is型",
+			"-ium型基本形 -es/-ēs, -is型",
 			[
 				[],
-				[],
+				[
+					[
+						"aedEs, aedis",
+						"家"
+					],
+					[
+						"caedEs, caedis",
+						"殺害、虐殺"
+					],
+					[
+						"clAdes, clAdis",
+						"損害"
+					],
+					[
+						"fames, famis",
+						"空腹、飢餓"
+					],
+					[
+						"nUbEs, nUbis",
+						"雲"
+					]
+				],
 				[],
 				[]
 			],
@@ -1809,38 +1830,69 @@
 		],
 		[
 			1,
-			"mOns",
-			"[m] 山",
-			"-ium型基本形 -s, -is型",
-			[
-				[],
-				[],
-				[],
-				[]
-			],
-			[
-				"mOn-s",
-				"(mont-em)",
-				"mont-is",
-				"(mont-I)",
-				"(mont-e)",
-				"(mont-Es)",
-				"(mont-Es)",
-				"mont-ium",
-				"(mont-ibus)",
-				"(mont-ibus)"
-			]
-		],
-		[
-			1,
 			"ars",
 			"[f] 技術、芸術",
-			"-ium型基本形 語幹変化をする-, -is型",
+			"-ium型基本形 -s, -is型",
 			[
+				[
+					[
+						"dEns, dentis",
+						"歯"
+					],
+					[
+						"fOns, fontis",
+						"泉、源"
+					],
+					[
+						"mOns, montis",
+						"山"
+					]
+				],
+				[
+					[
+						"frons, frondis",
+						"木の葉"
+					],
+					[
+						"frOns, frontis",
+						"額"
+					],
+					[
+						"gEns, gentis",
+						"種族、人種"
+					],
+					[
+						"mors, mortis",
+						"死"
+					],
+					[
+						"nox, noctis",
+						"夜"
+					],
+					[
+						"pars, partis",
+						"部分"
+					],
+					[
+						"serpEns, serpentis",
+						"蛇"
+					],
+					[
+						"urbs, urbis",
+						"都"
+					]
+				],
 				[],
-				[],
-				[],
-				[]
+				[
+					[
+						"adulEscEns, adulEscentis",
+						"青年"
+					],
+					[
+						"InfAns, Infantis",
+						"幼児"
+					]
+				]
 			],
 			[
 				"ars",
@@ -1863,7 +1915,16 @@
 			[
 				[],
 				[],
-				[],
+				[
+					[
+						"cubIle, cubIlis",
+						"寝台"
+					],
+					[
+						"conclAve, conclAvis",
+						"部屋"
+					]
+				],
 				[]
 			],
 			[
@@ -1887,7 +1948,24 @@
 			[
 				[],
 				[],
-				[],
+				[
+					[
+						"calcar, calcAris",
+						"拍車"
+					],
+					[
+						"exemplar, exemplAris",
+						"写し、模範"
+					],
+					[
+						"tribUnal, tribUnAlis",
+						"高段、法廷"
+					],
+					[
+						"vectIgal, vectIgAlis",
+						"税"
+					]
+				],
 				[]
 			],
 			[
@@ -2129,10 +2207,6 @@
 					[
 						"juvenis, is",
 						"青年"
-					],
-					[
-						"senex, sen-is",
-						"老人"
 					]
 				]
 			],
