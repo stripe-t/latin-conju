@@ -9,13 +9,15 @@
     ["am[A]re"],
     ["am{O}", "am[A]s", "am[a]t", "am[A]mus", "am[A]tis", "am[a]nt"],
     ["am[A]-[ba]m", "am[A]-[bA]s", "am[A]-[ba]t", "am[A]-[bA]mus", "am[A]-[bA]tis", "am[A]-[ba]nt"],
-    ["am{A}-{bO}", "am[A]-[bi]s", "am[a]-[bi]t", "am[A]-[bi]mus", "am[A]-[bi]tis", "am[A]-{bu}nt"]
+    ["am{A}-{bO}", "am[A]-[bi]s", "am[a]-[bi]t", "am[A]-[bi]mus", "am[A]-[bi]tis", "am[A]-{bu}nt"],
+    ["amAv-{I}", "amAv-[i]*stI*", "amAv-[i]t", "amAv-[i]mus", "amAv-[i]*s*tis", "amAv-{E}*ru*nt/amAv-{E}*re*"]
   ],
   ["第1活用の例外", "dO", "与える", "長音化しないものがある",
     ["d{a}re"],
     ["d[O]", "d[A]s", "d[a]t", "d{a}mus", "d{a}tis", "d[a]nt"],
     ["d{a}-[ba]m", "d{a}-[bA]s", "d{a}-[ba]t", "d{a}-[bA]mus", "d{a}-[bA]tis", "d{a}-[ba]nt"],
-    ["d{a}-{bO}", "d{a}-[bi]s", "d{a}-[bi]t", "d{a}-[bi]mus", "d{a}-[bi]tis", "d{a}-{bu}nt"]
+    ["d{a}-{bO}", "d{a}-[bi]s", "d{a}-[bi]t", "d{a}-[bi]mus", "d{a}-[bi]tis", "d{a}-{bu}nt"],
+    ["ded-{I}", "ded-[i]*stI*", "ded-[i]t", "ded-[i]mus", "ded-[i]*s*tis", "ded-{E}*ru*nt/ded-{E}*re*"]
   ],
   ["第2活用", "dEleO", "こわす", "",
     ["dEl[E]re"],

@@ -2454,6 +2454,14 @@
 				"am[A]-[bi]mus",
 				"am[A]-[bi]tis",
 				"am[A]-{bu}nt"
+			],
+			[
+				"amAv-{I}",
+				"amAv-{i}*stI*",
+				"amAv-{i}t",
+				"amAv-{i}mus",
+				"amAv-{i}*s*tis",
+				"amAv-{E}*ru*nt/amAv-{E}*re*"
 			]
 		],
 		[
@@ -2487,6 +2495,14 @@
 				"d{a}-[bi]mus",
 				"d{a}-[bi]tis",
 				"d{a}-{bu}nt"
+			],
+			[
+				"ded-{I}",
+				"ded-{i}*stI*",
+				"ded-{i}t",
+				"ded-{i}mus",
+				"ded-{i}*stis*",
+				"ded-{E}*runt*/ded-{E}*re*"
 			]
 		],
 		[
